@@ -3,11 +3,13 @@ export const site = {
   title: "Paye Davet Evi | Bursa’da Premium Davet Deneyimi",
   description:
     "Paye Davet Evi, Bursa’da söz, nişan, isteme ve butik organizasyonlar için zarif ve premium bir davet alanı sunar. 110 kişilik kapasite alanıyla butik organizasyonlara uygundur; özel anlarınıza şıklık katar.",
-  phone: "+90 224 000 00 00",
-  phoneHref: "tel:+902240000000",
-  whatsapp: "+902240000000",
-  whatsappHref: "https://wa.me/902240000000",
-  address: "Bursa, Türkiye",
+  phone: "+90 536 365 63 19",
+  phoneHref: "tel:+905363656319",
+  whatsapp: "+905363656319",
+  /** Mobil ve masaüstü için resmi wa.me formatı */
+  whatsappHref: "https://wa.me/905363656319",
+  /** Görünen konum etiketi (tam adres eklendiğinde güncellenebilir) */
+  address: "Paye Davet Evi — Bursa, Millet Mahallesi",
   instagramUrl: "https://www.instagram.com/payedavetevi",
   googleMapsUrl:
     "https://google.com/maps/place//data=!4m2!3m1!1s0x14ca3f0004f111df:0x4251f8887fa4905c?sa=X&ved=1t:8290&ictx=111",
@@ -57,3 +59,21 @@ export const galleryImages = [
 
 export const heroVideoSrc =
   "https://videos.pexels.com/video-files/3044121/3044121-hd_1920_1080_25fps.mp4";
+
+/** Schema.org — arama ve zengin sonuçlar için (telefon / konum) */
+export const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "EventVenue",
+  name: "Paye Davet Evi",
+  description:
+    "Bursa’da söz, nişan, isteme ve butik organizasyonlar için zarif davet alanı. 110 kişilik kapasiteye uygun butik düzenlemeler.",
+  telephone: "+905363656319",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Millet Mahallesi",
+    addressLocality: "Bursa",
+    addressRegion: "Bursa",
+    addressCountry: "TR",
+  },
+  sameAs: ["https://www.instagram.com/payedavetevi"],
+} as const;

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
-import { site } from "@/lib/data";
+import { organizationJsonLd, site } from "@/lib/data";
 
 const fontSerif = Cormorant_Garamond({
   subsets: ["latin"],
@@ -35,7 +35,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr" className={`${fontSerif.variable} ${fontSans.variable}`}>
-      <body className="min-h-screen font-sans">{children}</body>
+      <body className="min-h-screen font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

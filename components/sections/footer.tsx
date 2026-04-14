@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <p className="font-serif text-2xl font-semibold tracking-tight">{site.name}</p>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-olive-foreground/75">
-              Bursa’da butik davet deneyimi. Sakin lüks, ölçülü düzen.
+              Bursa Millet Mahallesi’nde, söz ve nişan gibi özel anlarınıza zarif ve ölçülü bir davet deneyimi sunuyoruz.
             </p>
           </div>
 
@@ -33,19 +33,19 @@ export function Footer() {
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-olive-foreground/60">İletişim</p>
             <ul className="mt-4 space-y-3 text-sm">
               <li>
-                <a href={site.phoneHref} className="transition-colors hover:text-cream">
-                  {site.phone}
-                </a>
-              </li>
-              <li>
                 <a
                   href={site.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 transition-colors hover:text-cream"
+                  className="inline-flex w-fit items-center gap-2 rounded-full border border-white/25 bg-white/12 px-3.5 py-1.5 font-medium transition-colors hover:bg-white/20"
                 >
-                  <MessageCircle className="size-4 shrink-0 opacity-90" strokeWidth={1.5} />
+                  <MessageCircle className="size-4 shrink-0 opacity-95" strokeWidth={1.5} />
                   WhatsApp
+                </a>
+              </li>
+              <li>
+                <a href={site.phoneHref} className="transition-colors hover:text-cream">
+                  {site.phone}
                 </a>
               </li>
               <li>
