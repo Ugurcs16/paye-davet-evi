@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 24 18% 16%;
+    --ivory: 40 35% 97%;
+    --ivory-muted: 38 28% 94%;
+    --champagne: 38 32% 93%;
+    --cream: 40 40% 99%;
+    --charcoal: 24 18% 16%;
+    --taupe: 28 12% 45%;
+    --gold: 38 38% 58%;
+    --gold-soft: 38 45% 88%;
+    --olive: 72 14% 34%;
+    --olive-muted: 72 12% 42%;
+    --olive-foreground: 48 35% 96%;
+    --border: 38 18% 88%;
+    --input: 38 18% 88%;
+    --ring: 72 14% 34%;
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
